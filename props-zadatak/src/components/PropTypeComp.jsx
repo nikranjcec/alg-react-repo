@@ -16,7 +16,7 @@ function PropTypeComp({ marka, model, boja, godina, mjenjac }) {
 PropTypeComp.propTypes = {
   marka: PropTypes.string.isRequired,
   model: PropTypes.string,
-  boja: PropTypes.number,
+  boja: PropTypes.string,
   mjenjac: PropTypes.oneOf(["A", "R"]),
   godina: PropTypes.number,
 };
