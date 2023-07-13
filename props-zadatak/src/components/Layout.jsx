@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           border: "1px solid black",
-          "border-radius": "30px",
+          borderRadius: "30px",
           color: "blue",
         }}
       >
