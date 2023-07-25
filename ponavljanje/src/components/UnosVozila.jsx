@@ -4,15 +4,17 @@ import { useState } from "react";
 function UnosVozila({ onSubmit }) {
   const [marka, setMarka] = useState("");
   const [tip, setTip] = useState("");
+  const [godiste, setGodiste] = useState("");
 
   const saveVozilo = (event) => {
     event.preventDefault();
 
-    let newVozilo = { marka: marka, tip: tip };
+    let newVozilo = { marka: marka, tip: tip, godiste: godiste };
     onSubmit({ newVozilo });
 
     setMarka("");
     setTip("");
+    setGodiste("");
   };
 
   return (
@@ -32,6 +34,15 @@ function UnosVozila({ onSubmit }) {
           type="text"
           value={tip}
           onChange={(e) => setTip(e.target.value)}
+        />
+      </p>
+
+      <p>
+        <label>Godiste: </label>
+        <input
+          type="text"
+          value={godiste}
+          onChange={(e) => setGodiste(e.target.value)}
         />
       </p>
 
