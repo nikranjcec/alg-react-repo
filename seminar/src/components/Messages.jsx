@@ -2,16 +2,21 @@ import React, { useEffect } from "react";
 
 function renderMessage(message, currentUser) {
   const messageFromMe = message.clientId === currentUser.id;
-  const className = messageFromMe ? "msg-message currentMember" : "msg-message";
+  const classNameListItem = messageFromMe
+    ? "msg-message-currentUser"
+    : "msg-message";
+  const classNameMsg = messageFromMe
+    ? "msg-content-text-cuurentUser"
+    : "msg-content-text";
   return (
-    <li key={message.id} className={className}>
+    <li key={message.id} className={classNameListItem}>
       <span
         className="avatar"
         style={{ backgroundColor: message.member.clientData.color }}
       />
       <div className="msg-content">
         <div className="username">{message.member.clientData.username}</div>
-        <div className="text">{message.data}</div>
+        <div className={classNameMsg}>{message.data}</div>
       </div>
       {/* <div className="msg-date">{getHumaDateTime(message.timestamp)}</div> */}
     </li>

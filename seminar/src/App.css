@@ -16,20 +16,16 @@
   padding: 0 10px;
 }
 
-/* .Messages-list {
-  list-style: none;
-  padding-left: 0;
-  flex-grow: 1;
-  position: absolute;
-} */
-
 .msg-message {
   display: flex;
   margin-top: 10px;
   position: relative;
 }
 
-.msg-message.currentMember {
+.msg-message-currentUser {
+  display: flex;
+  margin-top: 10px;
+  position: relative;
   flex-direction: row-reverse;
   text-align: right;
 }
@@ -38,18 +34,12 @@
   height: 15px;
   width: 15px;
   border-radius: 50%;
-}
-
-.msg-message > .avatar {
-  margin: 0 10px -10px;
+  margin: 5px;
 }
 
 .username {
   color: gray;
   font-size: 10px;
-}
-.msg-content > .username {
-  padding-bottom: 4px;
 }
 
 .msg-date {
@@ -58,13 +48,23 @@
   bottom: 0;
 }
 
-.msg-content > .text {
+.msg-content-text {
   padding: 10px;
   max-width: 400px;
   margin: 0;
   border-radius: 12px;
   background-color: midnightblue;
   color: white;
+  display: inline-block;
+}
+
+.msg-content-text-cuurentUser {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: darkseagreen;
+  color: black;
   display: inline-block;
 }
 
@@ -83,19 +83,6 @@
   margin-right: 8px;
   margin-bottom: 8px;
   float: left;
-}
-.members-list-avatar {
-  margin-right: 5px;
-  height: 24px;
-  width: 24px;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-}
-
-.currentMember > .Message-content .text {
-  background-color: darkseagreen;
-  color: black;
 }
 
 button {

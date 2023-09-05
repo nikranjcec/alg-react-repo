@@ -4,7 +4,7 @@ function rederMembers(m) {
   return (
     <li className="members-list-member">
       <span
-        className="members-list-avatar"
+        className="avatar"
         style={{ backgroundColor: m.clientData.color }}
       />
       <div>
