@@ -6,7 +6,7 @@
   background-color: rgba(104, 104, 190, 0.07);
 }
 
-.App-content {
+.chat-container {
   width: 100%;
   max-width: 900px;
   height: 100%;
@@ -16,20 +16,20 @@
   padding: 0 10px;
 }
 
-.essages-list {
+/* .Messages-list {
   list-style: none;
   padding-left: 0;
   flex-grow: 1;
   position: absolute;
-}
+} */
 
-.Messages-message {
+.msg-message {
   display: flex;
   margin-top: 10px;
   position: relative;
 }
 
-.Messages-message.currentMember {
+.msg-message.currentMember {
   flex-direction: row-reverse;
   text-align: right;
 }
@@ -40,7 +40,7 @@
   border-radius: 50%;
 }
 
-.Messages-message > .avatar {
+.msg-message > .avatar {
   margin: 0 10px -10px;
 }
 
@@ -48,7 +48,7 @@
   color: gray;
   font-size: 10px;
 }
-.Message-content > .username {
+.msg-content > .username {
   padding-bottom: 4px;
 }
 
@@ -58,7 +58,7 @@
   bottom: 0;
 }
 
-.Message-content > .text {
+.msg-content > .text {
   padding: 10px;
   max-width: 400px;
   margin: 0;

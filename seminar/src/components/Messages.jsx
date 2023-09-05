@@ -2,16 +2,14 @@ import React, { useEffect } from "react";
 
 function renderMessage(message, currentUser) {
   const messageFromMe = message.clientId === currentUser.id;
-  const className = messageFromMe
-    ? "Messages-message currentMember"
-    : "Messages-message";
+  const className = messageFromMe ? "msg-message currentMember" : "msg-message";
   return (
     <li key={message.id} className={className}>
       <span
         className="avatar"
         style={{ backgroundColor: message.member.clientData.color }}
       />
-      <div className="Message-content">
+      <div className="msg-content">
         <div className="username">{message.member.clientData.username}</div>
         <div className="text">{message.data}</div>
       </div>
@@ -35,9 +33,7 @@ function Messages({ messages, currentUser }) {
   });
 
   return (
-    <ul className="Messages-list">
-      {messages.map((message) => renderMessage(message, currentUser))}
-    </ul>
+    <ul>{messages.map((message) => renderMessage(message, currentUser))}</ul>
   );
 }
 
